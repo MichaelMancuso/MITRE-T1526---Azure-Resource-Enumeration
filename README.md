@@ -5,8 +5,6 @@ https://www.linkedin.com/pulse/simulating-mitre-attck-t1526-azure-practical-red-
 T1526 - Cloud Service Discovery - Red Team TTP Demo .DESCRIPTION     Enumerates Azure/M365 cloud services and resources within the tenant.     For authorized red team use only.
 # 🔍 MITRE ATT&CK T1526 - Azure Resource Enumeration (PowerShell)
 
-# ðŸš€ MITRE ATT&CK T1526 â€“ Azure Resource Enumeration (PowerShell)
-
 ## Overview
 Cloud attacks rarely start with exploitation â€” they start with **visibility**.
 
@@ -45,15 +43,10 @@ This script enumerates:
 ![Enumeration Flow](https://raw.githubusercontent.com/MichaelMancuso/MITRE-T1526---Azure-Resource-Enumeration/main/images/azure-t1526-flow.png)
 
 Authenticate to Azure  
-â†“  
 Retrieve Graph API Token  
-â†“  
 Enumerate Azure Resources  
-â†“  
 Enumerate Entra ID Users & Groups  
-â†“  
 Enumerate Service Principals  
-â†“  
 Map Tenant Attack Surface  
 
 ---
@@ -62,8 +55,8 @@ Map Tenant Attack Surface
 
 ![Red vs Blue](https://raw.githubusercontent.com/MichaelMancuso/MITRE-T1526---Azure-Resource-Enumeration/main/images/red-blue-model.png)
 
-RED TEAM â†’ Enumeration  
-BLUE TEAM â†’ Detection  
+RED TEAM - Enumeration  
+BLUE TEAM - Detection  
 
 ---
 
