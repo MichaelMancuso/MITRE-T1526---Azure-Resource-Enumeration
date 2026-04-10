@@ -1,4 +1,4 @@
-# MITRE T1526 Azure-Resource-Enumeration
+# MITRE T1526 Azure-Resource-Enumeration "https://www.linkedin.com/pulse/simulating-mitre-attck-t1526-azure-practical-red-vs-blue-mancuso-yag7c"
 T1526 - Cloud Service Discovery - Red Team TTP Demo .DESCRIPTION     Enumerates Azure/M365 cloud services and resources within the tenant.     For authorized red team use only.
 # 🔍 MITRE ATT&CK T1526 - Azure Resource Enumeration (PowerShell)
 
@@ -50,4 +50,3 @@ The script provides a **realistic attacker simulation** while also highlighting 
 ```powershell
 .\T1526-Azure-Enumeration.ps1
 
-https://www.linkedin.com/pulse/simulating-mitre-attck-t1526-azure-practical-red-vs-blue-mancuso-yag7c
