@@ -5,51 +5,85 @@ https://www.linkedin.com/pulse/simulating-mitre-attck-t1526-azure-practical-red-
 T1526 - Cloud Service Discovery - Red Team TTP Demo .DESCRIPTION     Enumerates Azure/M365 cloud services and resources within the tenant.     For authorized red team use only.
 # 🔍 MITRE ATT&CK T1526 - Azure Resource Enumeration (PowerShell)
 
-## 📌 Overview
+# ðŸš€ MITRE ATT&CK T1526 â€“ Azure Resource Enumeration (PowerShell)
 
-This PowerShell script simulates **MITRE ATT&CK Technique T1526 – Cloud Service Discovery** by enumerating Azure and Entra ID resources within a tenant.
+## Overview
+Cloud attacks rarely start with exploitation â€” they start with **visibility**.
 
-It is designed for:
-- 🔴 Red Team exercises
-- 🟣 Purple Team validation
-- 🔵 SOC detection tuning
-
-The script provides a **realistic attacker simulation** while also highlighting **defensive telemetry and detection opportunities**.
+This PowerShell script simulates **MITRE ATT&CK T1526 â€“ Cloud Service Discovery** for Azure and Entra ID environments. 
+It provides safe, read-only enumeration for Red, Blue, and Purple team exercises.
 
 ---
 
-## ⚔️ Technique Mapping
+## MITRE ATT&CK Mapping
 
-- **MITRE ATT&CK**: T1526 – Cloud Service Discovery  
-- **Tactic**: Discovery  
-- **Platform**: Azure / Entra ID (M365)
-
----
-
-## 🔧 Features
-
-- ✅ Auto-installs required modules (`Az.Accounts`, `Az.Resources`)
-- 🔐 Authenticates using `Connect-AzAccount`
-- 🎯 Uses **Graph API via token reuse** (no SDK dependency)
-- 📊 Enumerates:
-  - Azure Subscriptions & Resource Groups
-  - Entra ID Users & Groups
-  - Service Principals & App Registrations
-- ⚙️ Interactive execution (operator-driven)
-- 🚨 Includes **SOC detection guidance**
+| Field | Value |
+|------|------|
+| Technique | T1526 |
+| Name | Cloud Service Discovery |
+| Tactic | Discovery |
+| Platform | Azure / Entra ID |
+| Use Case | Red / Blue / Purple Team |
 
 ---
 
-## 📥 Requirements
+## What the Script Does
 
-- PowerShell 5.1+ or PowerShell Core
-- Azure account with appropriate permissions
-- Internet access for module installation
+This script enumerates:
+- Azure subscriptions
+- Resource groups
+- Azure resources
+- Entra ID users
+- Groups
+- Service principals
+- App registrations
 
 ---
 
-## 🚀 Usage
+## Logical Enumeration Flow
 
-```powershell
-.\T1526-Azure-Enumeration.ps1
+![Enumeration Flow](https://raw.githubusercontent.com/MichaelMancuso/MITRE-T1526---Azure-Resource-Enumeration/main/images/azure-t1526-flow.png)
+
+Authenticate to Azure  
+â†“  
+Retrieve Graph API Token  
+â†“  
+Enumerate Azure Resources  
+â†“  
+Enumerate Entra ID Users & Groups  
+â†“  
+Enumerate Service Principals  
+â†“  
+Map Tenant Attack Surface  
+
+---
+
+## Red vs Blue Detection Model
+
+![Red vs Blue](https://raw.githubusercontent.com/MichaelMancuso/MITRE-T1526---Azure-Resource-Enumeration/main/images/red-blue-model.png)
+
+RED TEAM â†’ Enumeration  
+BLUE TEAM â†’ Detection  
+
+---
+
+## Safety
+
+This script is read-only and does not:
+- Modify resources
+- Change permissions
+- Create identities
+- Deploy infrastructure
+
+---
+
+## GitHub Script
+
+https://github.com/MichaelMancuso/MITRE-T1526---Azure-Resource-Enumeration/blob/main/MITRE%20T1526%20-%20Azure%20Resource%20Enumeration.ps1
+
+---
+
+## Author
+Michael Mancuso
+
 
