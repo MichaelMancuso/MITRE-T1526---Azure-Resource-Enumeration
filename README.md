@@ -49,3 +49,5 @@ The script provides a **realistic attacker simulation** while also highlighting 
 
 ```powershell
 .\T1526-Azure-Enumeration.ps1
+
+https://www.linkedin.com/pulse/simulating-mitre-attck-t1526-azure-practical-red-vs-blue-mancuso-yag7c
